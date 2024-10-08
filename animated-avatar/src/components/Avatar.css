@@ -1,0 +1,38 @@
+/* Keyframes for the walking movement */
+@keyframes walk {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100vw);
+        /* Move across the screen */
+    }
+}
+
+/* Avatar styling */
+.avatar {
+    background-image: url('/public/avatar.png');
+    /* Add the sprite image or walking sequence */
+    will-change: transform;
+}
+
+/* Walk animation */
+.animate-walk {
+    animation: walk 8s linear infinite;
+}
+
+/* Media Queries for responsiveness */
+@media (min-width: 768px) {
+    .avatar {
+        animation-duration: 6s;
+        /* Adjust speed for tablets */
+    }
+}
+
+@media (min-width: 1024px) {
+    .avatar {
+        animation-duration: 4s;
+        /* Faster on desktops */
+    }
+}
