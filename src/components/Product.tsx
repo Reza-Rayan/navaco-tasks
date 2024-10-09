@@ -25,6 +25,8 @@ const Product = (product: ProductType) => {
             title={product.title}
             description={product.description}
             image={product.image}
+            price={product.price}
+            category={product.category}
           />
         </div>
       </div>
