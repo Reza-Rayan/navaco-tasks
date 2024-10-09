@@ -1,12 +1,14 @@
 import { ChangeEvent, useEffect, useState } from "react";
 import axios from "axios";
+import { Toaster } from "react-hot-toast";
 import { Product as ProductTypes } from "./types/Product";
+import { BaseURL } from "./utils/BaseURL";
 // Custom Components
 import NotFoundProduct from "./components/NotFoundProduct";
 import ProductList from "./components/ProductList";
 import SearchBar from "./components/SearchBar";
-import { BaseURL } from "./utils/BaseURL";
-// -------------------------------------------------
+import Avatar from "./components/Avatar";
+// -------------------------------------------------------
 
 const App = () => {
   const [products, setProducts] = useState([]);
@@ -36,6 +38,7 @@ const App = () => {
 
   return (
     <main className="min-h-screen p-8 w-full bg-slate-900 text-white">
+      <Toaster />
       <div className="container mx-auto flex flex-col gap-10">
         <h1 className="text-5xl font-bold text-center">Product List</h1>
         <SearchBar
@@ -45,11 +48,12 @@ const App = () => {
           value={searchQuery}
         />
         {filteredProducts.length === 0 ? (
-          <NotFoundProduct  searchQuery={searchQuery} />
+          <NotFoundProduct searchQuery={searchQuery} />
         ) : (
           <ProductList products={filteredProducts} />
         )}
       </div>
+      <Avatar />
     </main>
   );
 };
