@@ -5,6 +5,7 @@ import useDebounce from "./hooks/useDebounce";
 import { Product as ProductTypes } from "./types/Product";
 import { BaseURL } from "./utils/BaseURL";
 // Custom Components
+import Title from "./components/Title";
 import Avatar from "./components/Avatar";
 import NotFoundProduct from "./components/NotFoundProduct";
 import ProductList from "./components/ProductList";
@@ -50,7 +51,7 @@ const App = () => {
     <main className="min-h-screen p-8 w-full bg-slate-900 text-white">
       <Toaster />
       <div className="container mx-auto flex flex-col gap-10">
-        <h1 className="text-5xl font-bold text-center">Product List</h1>
+        <Title>Product List</Title>
         <SearchBar
           onChange={(ev: ChangeEvent<HTMLInputElement>) =>
             setSearchQuery(ev.target.value)

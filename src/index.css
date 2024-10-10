@@ -3,3 +3,28 @@
 @tailwind components;
 @tailwind utilities;
 /* End Here */
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Custom Styles */
+
+.title::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 60px;
+    background-color: #4f46e5;
+    position: absolute;
+    bottom: 0;
+
+}
+
+/* End Here */
