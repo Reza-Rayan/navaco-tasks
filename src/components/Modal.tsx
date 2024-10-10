@@ -65,7 +65,7 @@ export default function Modal(product: Product) {
               </div>
             </div>
           </div>
-          <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+          <div className="opacity-70 fixed inset-0 z-40 bg-black"></div>
         </>
       ) : null}
     </>
